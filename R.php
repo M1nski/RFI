@@ -1,12 +1,10 @@
 <?php
-// Chemin vers le répertoire courant
-$chemin_courant = './';
+// Chemin du fichier
+$chemin_fichier = 'index.php';
 
-// Utilise glob() pour obtenir la liste des fichiers et répertoires dans le répertoire courant
-$elements = glob($chemin_courant . '*', GLOB_MARK);
+// Lecture du contenu du fichier
+$contenu = file_get_contents($chemin_fichier);
 
-// Affiche les éléments du répertoire courant
-foreach ($elements as $element) {
-    echo basename($element) . "<br>";
-}
+// Affichage du contenu
+echo $contenu;
 ?>
